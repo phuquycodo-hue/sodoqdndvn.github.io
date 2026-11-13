@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dòng thời gian lịch sử Quân đội nhân dân Việt Nam">
+  <title>Dòng thời gian lịch sử | Quân đội nhân dân Việt Nam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-grain"></div>
+  <header class="hero">
+    <div class="hero-emblem" aria-hidden="true">
+      <svg viewBox="0 0 180 105" role="img" aria-label="Biểu tượng chim bồ câu cách điệu">
+        <path d="M85 57 C62 45 45 22 22 17 C34 39 48 55 66 64 C47 64 29 56 12 47 C24 69 48 82 75 78 C88 76 98 66 105 56Z" fill="#f6f2df" stroke="#fff" stroke-width="2"/>
+        <path d="M91 51 C97 31 108 15 121 5 C126 24 124 42 111 57 C125 48 141 43 159 44 C147 60 130 69 108 67Z" fill="#f6f2df" stroke="#fff" stroke-width="2"/>
+        <path d="M83 59 L145 62 L164 58 L158 69 L101 70 L91 88 L84 82 L90 68Z" fill="#24301f"/>
+        <path d="M91 53 Q105 48 113 37 Q121 45 116 57 Q106 68 91 66Z" fill="#fff" stroke="#ded8c3" stroke-width="2"/>
+        <circle cx="112" cy="46" r="2.2" fill="#bd4f35"/>
+        <path d="M116 46 L126 43 L119 51Z" fill="#bd4f35"/>
+        <path d="M48 65 Q72 74 87 62" fill="none" stroke="#d9d2ba" stroke-width="3"/>
+        <path d="M105 63 Q119 75 134 73" fill="none" stroke="#6e7a45" stroke-width="4"/>
+        <path d="M126 70 Q140 65 151 72" fill="none" stroke="#6e7a45" stroke-width="3"/>
+      </svg>
+    </div>
+    <p class="eyebrow">DÒNG CHẢY LỊCH SỬ</p>
+    <h1>Quân đội nhân dân<br><span>Việt Nam</span></h1>
+    <p class="hero-subtitle">Những dấu mốc tiêu biểu trong quá trình xây dựng, chiến đấu và trưởng thành</p>
+    <div class="hero-rule"><span></span><i>★</i><span></span></div>
+  </header>
+
+  <main class="layout">
+    <aside class="side-intro">
+      <div class="side-sticky">
+        <p class="eyebrow dark">HÀNH TRÌNH QUA CÁC THỜI KỲ</p>
+        <h2>Dòng<br>thời gian</h2>
+        <p class="side-copy">Từ ngày đầu thành lập đến sự nghiệp xây dựng và bảo vệ Tổ quốc trong thời kỳ mới.</p>
+        <div class="period-nav" id="periodNav" aria-label="Chọn giai đoạn"></div>
+        <div class="side-note">
+          <span class="note-line"></span>
+          <span>Tư liệu khái quát<br>có thể tiếp tục bổ sung</span>
+        </div>
+      </div>
+    </aside>
+
+    <section class="timeline-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">CÁC MỐC LỊCH SỬ</p>
+          <h2>Hành trình vẻ vang</h2>
+        </div>
+        <div class="event-count"><strong id="eventCount">—</strong><span>sự kiện tiêu biểu</span></div>
+      </div>
+      <div class="timeline" id="timeline"></div>
+      <footer class="site-footer">
+        <span class="footer-star">★</span>
+        <p>Giữ gìn truyền thống · Tiếp bước cha anh · Xây dựng Quân đội cách mạng, chính quy, tinh nhuệ, hiện đại</p>
+      </footer>
+    </section>
+  </main>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
