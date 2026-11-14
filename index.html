@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav class="site-nav" aria-label="Điều hướng chính"><div class="nav-inner"><a class="nav-brand" href="index.html"><span class="nav-brand-mark">✦</span><strong>LỊCH SỬ<br>QĐND VIỆT NAM</strong></a><button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false" onclick="toggleSiteMenu()">☰</button><div class="nav-links"><a class="nav-link active" href="index.html"><span class="nav-icon">◷</span>Timeline</a><a class="nav-link " href="heroes.html"><span class="nav-icon">✥</span>Anh hùng tiêu biểu</a><a class="nav-link " href="events.html"><span class="nav-icon">⚑</span>Sự kiện lịch sử</a><a class="nav-link " href="gallery.html"><span class="nav-icon">▧</span>Tư liệu hình ảnh</a><a class="nav-link " href="settings.html"><span class="nav-icon">⚙</span>Cài đặt</a></div></div></nav>
   <div class="page-grain"></div>
   <header class="hero">
     <div class="hero-emblem" aria-hidden="true">
@@ -63,5 +64,6 @@
   </main>
   <script src="data.js"></script>
   <script src="script.js"></script>
+<script>function toggleSiteMenu(){const n=document.querySelector('.site-nav');const b=document.querySelector('.nav-toggle');n.classList.toggle('menu-open');b.setAttribute('aria-expanded',n.classList.contains('menu-open')?'true':'false')}</script>
 </body>
 </html>

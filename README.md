@@ -41,3 +41,15 @@ Trong `data.js`, sao chép một đối tượng trong mảng `EVENTS`, sau đó
 
 ## 5. Lưu ý về nội dung
 Website được cung cấp kèm dữ liệu khái quát và một số mốc tiêu biểu để làm mẫu, không phải bộ tư liệu lịch sử đầy đủ hoặc ấn bản thẩm định. Trước khi sử dụng trong bài giảng, trưng bày, tuyên truyền hoặc xuất bản chính thức, hãy đối chiếu ngày tháng, địa danh, tên đơn vị và nội dung với tài liệu lịch sử, văn kiện và nguồn chính thống. Có thể bổ sung chú thích nguồn ở cuối từng sự kiện.
+
+
+## 6. Các chuyên mục của website
+- `index.html`: Timeline – dòng thời gian lịch sử.
+- `heroes.html`: Anh hùng tiêu biểu (khung nội dung mẫu, cần tiếp tục biên soạn và kiểm chứng).
+- `events.html`: Sự kiện lịch sử, tự lấy dữ liệu từ `data.js`.
+- `gallery.html`: Tư liệu hình ảnh (khung thư viện mẫu để bổ sung ảnh).
+- `settings.html`: Cài đặt giao diện sáng/tối và cỡ chữ.
+- Thanh điều hướng chung xuất hiện ở đầu các trang; trên màn hình nhỏ sẽ thu gọn thành menu.
+
+## 7. Cập nhật lên GitHub Pages
+Tải các tệp HTML mới (`heroes.html`, `events.html`, `gallery.html`, `settings.html`) cùng `style.css`, `index.html`, `detail.html` và các tệp dữ liệu liên quan lên repository, giữ `index.html` ở thư mục gốc. GitHub Pages sẽ tự triển khai sau khi commit.
