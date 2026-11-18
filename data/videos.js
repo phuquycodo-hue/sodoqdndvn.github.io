@@ -16,7 +16,7 @@ window.VIDEO_FILES[0].push({
 window.VIDEO_FILES[1].push({
   title: "Giai đoạn 1944-1945",
   file: "19441945.mp4",
-  youtube: "", // Dán đường link YouTube vào đây; có link thì ưu tiên phát YouTube.
+  youtube: "https://www.youtube.com/watch?v=GVaYze11c3M", // Dán đường link YouTube vào đây; có link thì ưu tiên phát YouTube.
   poster: "vo nguyen giap.jpg"
 });
 // 3. Kháng chiến chống thực dân Pháp (1945–1954)
