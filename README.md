@@ -1,55 +1,42 @@
-# Website Timeline – Lịch sử Quân đội nhân dân Việt Nam
+# Website lịch sử Quân đội nhân dân Việt Nam — bản nâng cấp
 
-## 1. Cách chạy trên máy tính
-1. Tải và giải nén `website_timeline_qdndvn.zip`.
-2. Mở thư mục vừa giải nén.
-3. Nhấp đúp vào `index.html` để mở bằng Chrome, Edge hoặc Firefox.
-4. Bấm **Chi tiết sự kiện** để mở trang nội dung riêng của từng sự kiện.
-5. Không cần cài đặt máy chủ hay phần mềm lập trình để xem website.
+## Khởi chạy
+Giải nén và mở `index.html` bằng Chrome hoặc Edge. Website tĩnh, đăng lên GitHub Pages được. Giữ nguyên toàn bộ cấu trúc thư mục.
 
-Khuyến nghị: cài Visual Studio Code nếu muốn chỉnh sửa mã nguồn thuận tiện.
+## Chức năng
+- **Timeline**: 5 giai đoạn có thẻ lựa chọn lớn, chỉ hiển thị sự kiện thuộc giai đoạn đang chọn.
+- **Chi tiết sự kiện**: phân trang tránh trang cuối chỉ 1-2 dòng; mỗi trang có đường dẫn ảnh riêng; chỉ số chú thích bấm hoặc rê chuột để xem nội dung nguồn theo file Word.
+- **Anh hùng**: hồ sơ hai thời kỳ kháng chiến; bỏ khung ảnh chiến công ở cuối.
+- **Video**: mỗi giai đoạn có khu thẻ video lớn, ảnh bìa riêng, xem video trong hộp thoại lớn.
+- **Kiểm tra**: 20 câu trắc nghiệm 4 đáp án, chấm điểm và hiện lời giải; tệp Windows tại `downloads/qdnd_exam.exe` có nút tải riêng.
+- **Cài đặt**: 8 màu chủ đề, 4 màu nhấn, 5 font, cỡ chữ, giãn dòng, độ rộng, mật độ, căn lề, góc thẻ và giảm chuyển động. Tùy chỉnh áp dụng trên mọi trang và lưu bằng localStorage.
 
-## 2. Cấu trúc
-- `index.html`: trang tổng quan và danh sách dòng thời gian.
-- `detail.html`: mẫu trang chi tiết sự kiện.
-- `style.css`: màu sắc, bố cục, kiểu chữ và giao diện responsive.
-- `data.js`: toàn bộ dữ liệu sự kiện; đây là tệp chính cần chỉnh sửa khi thêm nội dung.
-- `script.js`: dựng timeline và điều hướng giai đoạn.
-- `detail.js`: hiển thị trang chi tiết theo mã sự kiện.
-- `assets/`: nơi lưu ảnh tư liệu do bạn bổ sung.
+## Thêm ảnh theo TRANG trong Timeline
+1. Chép ảnh vào `assets/events/`, ví dụ `chien-dich-trang-1.jpg` và `chien-dich-trang-2.jpg`.
+2. Mở `data/periods.js`, tìm tên sự kiện, tìm mảng `images`: mỗi phần tử tương ứng một trang.
+3. Điền các đường dẫn: `"images": ["assets/events/chien-dich-trang-1.jpg", "assets/events/chien-dich-trang-2.jpg"]`.
+4. Không có ảnh trang nào thì để `""` ở vị trí đó. Không dùng lại ảnh trang 1 cho các trang khác.
+5. Nếu bạn tự sửa số đoạn nội dung của sự kiện, số trang có thể thay đổi, cần kiểm tra lại mảng `images`.
 
-## 3. Cách thay ảnh tư liệu
-1. Chép ảnh vào thư mục `assets`.
-2. Mở `data.js`.
-3. Tìm sự kiện muốn thêm ảnh.
-4. Sửa `image:""` thành ví dụ `image:"assets/dien-bien-phu.jpg"`.
-5. Sửa `imageAlt` thành mô tả ảnh.
-6. Lưu tệp và tải lại trang.
+## Chú thích nguồn
+Các chú thích `[1]`, `[2]`... và `(3)`... được lấy từ tài liệu người dùng gửi và lưu trong thuộc tính `footnotes` của từng giai đoạn trong `data/periods.js`. Số chú thích in đậm, di chuột (máy tính) hoặc chạm (điện thoại) để xem nội dung. Số nguồn có thể lặp lại ở giai đoạn khác, vì đánh số được giữ theo phạm vi của tài liệu gốc.
 
-Nên dùng ảnh có quyền sử dụng phù hợp, ghi nguồn và chú thích ảnh khi cần.
+## Thêm video và ảnh bìa
+- Trong thư mục `videos/` có 5 thư mục con, mỗi thư mục có `HUONG_DAN.txt`.
+- Khai báo theo mẫu trong `data/videos.js` với `title`, `file`, `poster`.
+- Nên dùng MP4 chuẩn H.264 và AAC, ảnh bìa JPEG 16:9.
+- GitHub web giới hạn kích thước từng tệp tải lên; video lớn nên dùng nền tảng chuyên lưu trữ video.
 
-## 4. Cách thêm sự kiện
-Trong `data.js`, sao chép một đối tượng trong mảng `EVENTS`, sau đó thay:
-- `id`: mã duy nhất, không dấu, không khoảng trắng.
-- `period`: một trong các mã `1944-1954`, `1954-1975`, `1975-1986`, `1986-nay`.
-- `date`: ngày/tháng/năm hoặc khoảng thời gian.
-- `title`: tên sự kiện.
-- `tag`: nhãn ngắn.
-- `summary`: đoạn giới thiệu hiển thị trên timeline.
-- `content`: mảng các đoạn nội dung ở trang chi tiết.
-- `image`: đường dẫn ảnh trong thư mục assets hoặc chuỗi rỗng.
+## Phần mềm thi Windows
+Tệp `downloads/qdnd_exam.exe` là bản gốc người dùng cung cấp, KHÔNG chạy hay phân tích hành vi trong lúc làm website.
+- Logo riêng: `assets/logo-phan-mem-thi.svg`.
+- Liên kết từ trang Kiểm tra tải trực tiếp file.
+- Kích thước: 10,990,594 bytes.
+- SHA-256: `afa44e9c136142ddb01c673e063f143b995ddc95dae5d270ddb5625a89e1625f`
+- Lưu ý: `.exe` chỉ chạy trên Windows và có thể bị cảnh báo bảo mật; người dùng nên quét trước khi chạy.
 
-## 5. Lưu ý về nội dung
-Website được cung cấp kèm dữ liệu khái quát và một số mốc tiêu biểu để làm mẫu, không phải bộ tư liệu lịch sử đầy đủ hoặc ấn bản thẩm định. Trước khi sử dụng trong bài giảng, trưng bày, tuyên truyền hoặc xuất bản chính thức, hãy đối chiếu ngày tháng, địa danh, tên đơn vị và nội dung với tài liệu lịch sử, văn kiện và nguồn chính thống. Có thể bổ sung chú thích nguồn ở cuối từng sự kiện.
+## Đăng lên GitHub Pages
+Trong thư mục này có `index.html`. Hãy tải **NỘI DUNG** thư mục này lên thư mục gốc của repository (không tải lồng thêm một tầng). GitHub Settings → Pages → Deploy from branch → `main`, `/ (root)`.
 
-
-## 6. Các chuyên mục của website
-- `index.html`: Timeline – dòng thời gian lịch sử.
-- `heroes.html`: Anh hùng tiêu biểu (khung nội dung mẫu, cần tiếp tục biên soạn và kiểm chứng).
-- `events.html`: Sự kiện lịch sử, tự lấy dữ liệu từ `data.js`.
-- `gallery.html`: Tư liệu hình ảnh (khung thư viện mẫu để bổ sung ảnh).
-- `settings.html`: Cài đặt giao diện sáng/tối và cỡ chữ.
-- Thanh điều hướng chung xuất hiện ở đầu các trang; trên màn hình nhỏ sẽ thu gọn thành menu.
-
-## 7. Cập nhật lên GitHub Pages
-Tải các tệp HTML mới (`heroes.html`, `events.html`, `gallery.html`, `settings.html`) cùng `style.css`, `index.html`, `detail.html` và các tệp dữ liệu liên quan lên repository, giữ `index.html` ở thư mục gốc. GitHub Pages sẽ tự triển khai sau khi commit.
+## Font và nguồn
+Giãn dòng mặc định 1.5, nội dung từ hai tài liệu Word bạn cung cấp, một số tên viết tắt được viết đầy đủ để dễ đọc. Tài liệu Word gốc không đi kèm ZIP công khai để tránh vô tình chia sẻ tệp gốc trên GitHub.
