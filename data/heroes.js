@@ -310,7 +310,7 @@ window.HEROES = [
       "Quê quán: Xã Thụy Xuân, huyện Thái Thụy, tỉnh Thái Bình.",
       "Đơn vị, chức vụ lúc lập công: Đại đội trưởng Đại đội 4, Tiểu đoàn 1, Lữ đoàn Xe tăng 203, Quân đoàn 2 (chỉ huy kíp xe tăng 843).",
       "Chiến công tiêu biểu:",
-      "o	Trưa ngày 30/4/1975, trong Chiến dịch Hồ Chí Minh lịch sử, Bùi Quang Thận chỉ huy chiếc xe tăng T-54B mang số hiệu 843 dẫn đầu đội hình tiến vào Dinh Độc Lập, húc nghiêng cổng phụ của Dinh. Ngay sau đó, ông mang theo lá cờ của Mặt trận Dân tộc Giải phóng miền Nam Việt Nam chạy lên tầng thượng Dinh Độc Lập, hạ cờ chế độ Sài Gòn và cắm lá cờ chiến thắng trên nóc Dinh Độc Lập vào lúc 11 giờ 30 phút ngày 30/4/1975, đánh dấu sự toàn thắng của cuộc kháng chiến chống Mỹ, cứu nước."
+      "Trưa ngày 30/4/1975, trong Chiến dịch Hồ Chí Minh lịch sử, Bùi Quang Thận chỉ huy chiếc xe tăng T-54B mang số hiệu 843 dẫn đầu đội hình tiến vào Dinh Độc Lập, húc nghiêng cổng phụ của Dinh. Ngay sau đó, ông mang theo lá cờ của Mặt trận Dân tộc Giải phóng miền Nam Việt Nam chạy lên tầng thượng Dinh Độc Lập, hạ cờ chế độ Sài Gòn và cắm lá cờ chiến thắng trên nóc Dinh Độc Lập vào lúc 11 giờ 30 phút ngày 30/4/1975, đánh dấu sự toàn thắng của cuộc kháng chiến chống Mỹ, cứu nước."
       "Danh hiệu: Tuyên dương Anh hùng Lực lượng vũ trang nhân dân ngày 12/9/1975."
     ],
     "image": "",
