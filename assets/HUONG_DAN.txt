@@ -1,7 +1,0 @@
-THU MUC CHUA ANH TU LIEU
-
-Hay chep cac anh JPG, PNG hoac WebP vao thu muc nay.
-Vi du: hai-quan-1955.jpg
-
-Sau do mo data.js va sua image:"" thanh:
-image:"assets/hai-quan-1955.jpg",
