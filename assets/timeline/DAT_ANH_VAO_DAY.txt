@@ -1,0 +1,5 @@
+Chep cac file anh JPG, PNG hoac WebP vao thu muc nay.
+Vi du: cu-chinh-lan.jpg, tu-ve-do.jpg, bien-gioi-1950.jpg.
+Trong data/periods.js, khai bao truong cover de hien anh o the su kien ben ngoai:
+"cover": "assets/timeline/tu-ve-do.jpg",
+Neu chua khai bao cover, trang se tu dung image hoac anh dau tien trong images.
