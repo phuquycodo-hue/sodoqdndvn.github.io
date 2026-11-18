@@ -1,3 +1,5 @@
+// Dữ liệu 28 hồ sơ Anh hùng – đã sửa lỗi chuỗi xuống dòng và bổ sung chiến công Bùi Quang Thận.
+// Có thể thêm ảnh bằng cách chỉnh thuộc tính portrait; không thay đổi cấu trúc dữ liệu.
 window.HEROES = [
   {
     "name": "Cù Chính Lan (1930 – 1951)",
@@ -295,6 +297,7 @@ window.HEROES = [
       "Chiến công tiêu biểu:",
       "Là nhà tình báo hoạt động đơn tuyến độc lập vô cùng mưu trí, thâm nhập vào hàng ngũ sĩ quan cao cấp của Quân lực Việt Nam Cộng hòa (lên tới chức Đại tá, Tỉnh trưởng Kiến Hòa/Bến Tre, Tham vụ báo chí tại Đại sứ quán Việt Nam Cộng hòa ở Mỹ). Ông đã trực tiếp phá vỡ nhiều cuộc hành quân càn quét lớn của địch, giải thoát hàng nghìn tù chính trị, cung cấp nhiều tin tức chiến lược quan trọng và tham gia dàn xếp các cuộc đảo chính làm rung chuyển nội bộ chính quyền Sài Gòn giai đoạn 1963–1965. Ông bị địch sát hại dã man tháng 7/1965 sau khi bị lộ.",
       "Danh hiệu: Truy tặng danh hiệu Anh hùng Lực lượng vũ trang nhân dân ngày 30/8/1995.",
+      "II. Các Anh hùng gắn liền với những chiến công biểu tượng trên đại chúng"
     ],
     "image": "",
     "portrait": "assets/heroes/pham ngoc thao.jpg",
@@ -310,13 +313,13 @@ window.HEROES = [
       "Quê quán: Xã Thụy Xuân, huyện Thái Thụy, tỉnh Thái Bình.",
       "Đơn vị, chức vụ lúc lập công: Đại đội trưởng Đại đội 4, Tiểu đoàn 1, Lữ đoàn Xe tăng 203, Quân đoàn 2 (chỉ huy kíp xe tăng 843).",
       "Chiến công tiêu biểu:",
-      "Trưa ngày 30/4/1975, trong Chiến dịch Hồ Chí Minh lịch sử, Bùi Quang Thận chỉ huy chiếc xe tăng T-54B mang số hiệu 843 dẫn đầu đội hình tiến vào Dinh Độc Lập, húc nghiêng cổng phụ của Dinh. Ngay sau đó, ông mang theo lá cờ của Mặt trận Dân tộc Giải phóng miền Nam Việt Nam chạy lên tầng thượng Dinh Độc Lập, hạ cờ chế độ Sài Gòn và cắm lá cờ chiến thắng trên nóc Dinh Độc Lập vào lúc 11 giờ 30 phút ngày 30/4/1975, đánh dấu sự toàn thắng của cuộc kháng chiến chống Mỹ, cứu nước."
+      "Trưa ngày 30/4/1975, trong Chiến dịch Hồ Chí Minh lịch sử, Bùi Quang Thận chỉ huy chiếc xe tăng T-54B mang số hiệu 843 dẫn đầu đội hình tiến vào Dinh Độc Lập, húc nghiêng cổng phụ của Dinh. Ngay sau đó, ông mang theo lá cờ của Mặt trận Dân tộc Giải phóng miền Nam Việt Nam chạy lên tầng thượng Dinh Độc Lập, hạ cờ chế độ Sài Gòn và cắm lá cờ chiến thắng trên nóc Dinh Độc Lập vào lúc 11 giờ 30 phút ngày 30/4/1975, đánh dấu sự toàn thắng của cuộc kháng chiến chống Mỹ, cứu nước.",
       "Danh hiệu: Tuyên dương Anh hùng Lực lượng vũ trang nhân dân ngày 12/9/1975."
     ],
     "image": "",
     "portrait": "assets/heroes/bui quang than.jpg",
     "storyPages": [],
-    "summary": ""
+    "summary": "Ngày 30/4/1975, chỉ huy xe tăng 843 tiến vào Dinh Độc Lập và cắm lá cờ chiến thắng trên nóc Dinh."
   },
   {
     "name": "Vũ Đăng Toàn (Sinh năm 1947)",
