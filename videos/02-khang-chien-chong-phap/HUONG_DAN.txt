@@ -1,0 +1,12 @@
+HƯỚNG DẪN THÊM VIDEO — GIAI ĐOẠN 2
+
+1. Sao chép video (ví dụ: ten-video.mp4) vào thư mục hiện tại.
+2. Tạo ảnh bìa 16:9 (ví dụ: ten-video.jpg), đặt cùng thư mục.
+3. Mở file data/videos.js bằng VS Code hoặc Notepad.
+4. Thêm thông tin video vào mảng thứ 2 (đánh số từ 0 trong cú pháp JavaScript).
+   Ví dụ dòng lệnh: window.VIDEO_FILES[1].push({title:"Tên video",file:"ten-video.mp4",poster:"ten-video.jpg"});
+   Dòng .push(...) phải được đặt sau dòng window.VIDEO_FILES = [[], [], [], [], []];
+5. Lưu tệp, mở videos.html kiểm tra rồi tải lên GitHub cả MP4, ảnh bìa và data/videos.js.
+6. Nhấp thẻ video sẽ mở trình phát toàn màn hình lớn. Video phải dùng mã hóa browser tương thích (MP4/H.264 + AAC).
+
+Lưu ý: Github web UI giới hạn tải lên từng tệp, video lớn nên dùng kho lưu trữ video chuyên dụng.

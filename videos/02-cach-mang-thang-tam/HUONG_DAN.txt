@@ -1,0 +1,8 @@
+VIDEO - CÁCH MẠNG THÁNG TÁM (1944–1945)
+
+1. Chép tệp MP4 và ảnh JPG vào thư mục này.
+2. Mở data/videos.js và thêm vào mục số 2, ví dụ:
+   window.VIDEO_FILES[1].push({title:"Cách mạng tháng Tám",file:"cach-mang-thang-tam.mp4",poster:"anh-bia.jpg"});
+3. Lưu tệp, nhấn Ctrl+F5 trong videos.html.
+
+Nếu đưa website lên GitHub Pages, tệp video lớn hơn 100 MB không thể tải lên Git thông thường. Cân nhắc dịch vụ video khác và cập nhật cách phát video tương ứng.
