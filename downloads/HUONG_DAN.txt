@@ -1,0 +1,8 @@
+PHAN MEM THI THU WINDOWS (tep nguoi dung cung cap)
+
+Tep: qdnd_exam.exe
+Dung luong: 10.5 MiB
+Day la tep thuc thi Windows, khong chay truc tiep tren GitHub Pages.
+Nguoi truy cap co the tai ve qua nut tai tren muc Kiem tra.
+Can kiem tra nguon goc va quet bao mat truoc khi chay.
+SHA-256: afa44e9c136142ddb01c673e063f143b995ddc95dae5d270ddb5625a89e1625f
