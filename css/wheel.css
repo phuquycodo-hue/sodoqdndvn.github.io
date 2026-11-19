@@ -1,0 +1,28 @@
+/* Vòng quay 50 câu. Độc lập với các style khác của website. */
+.wheel-game{background:linear-gradient(140deg,#fffdf7 0%,#fbf2dc 100%);border:1px solid #d9c99e;border-radius:22px;box-shadow:0 18px 50px #28382518;padding:clamp(20px,3.5vw,42px);margin:0 0 36px;color:#283627}
+.wheel-heading{text-align:center;margin-bottom:22px}.wheel-heading h2{font-family:inherit;font-size:clamp(1.5rem,2.6vw,2.15rem);line-height:1.28;margin:8px 0 10px;font-weight:800;color:#263c2b}.wheel-heading p{max-width:670px;margin:0 auto;color:#66685a;line-height:1.6}
+.wheel-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(230px,.8fr);align-items:center;gap:clamp(18px,2vw,40px)}
+.wheel-stage{position:relative;width:min(100%,600px);aspect-ratio:1;margin:0 auto;isolation:isolate;filter:drop-shadow(0 10px 18px #1d2d282b)}
+.wheel-disc{position:absolute;inset:0;will-change:transform;transform:rotate(0deg);border-radius:50%}
+.wheel-disc svg{width:100%;height:100%;display:block;overflow:visible}
+.wheel-pointer{pointer-events:none;position:absolute;z-index:3;width:clamp(34px,8vw,57px);height:clamp(50px,11vw,76px);top:-7px;left:50%;transform:translateX(-50%);filter:drop-shadow(0 3px 4px #21170a66)}
+.wheel-sidebar{display:flex;flex-direction:column;align-items:stretch;gap:15px}.wheel-counter{border:1px solid #d9d0b4;background:#f4ecda;padding:15px 20px;text-align:center;border-radius:14px}.wheel-counter strong{display:block;font-size:clamp(2rem,3vw,3rem);line-height:1.05;color:#8d251d}.wheel-counter span{color:#687161;font-size:.85rem}
+.wheel-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.wheel-stats div{background:#fffdfa;border-radius:12px;border:1px solid #dfd7c4;text-align:center;padding:12px 6px}.wheel-stats b{display:block;font-size:1.3rem;color:#294934}.wheel-stats span{font-size:.72rem;color:#727364}
+.wheel-status{min-height:3.5em;margin:2px 0 0;line-height:1.6;color:#3f4f40}.wheel-spin{width:100%;border:0;border-radius:13px;background:#a12a24;color:#fff;padding:16px 12px;font-family:inherit;font-size:1rem;font-weight:800;cursor:pointer;box-shadow:0 6px 0 #7b211c;transition:transform .15s,box-shadow .15s}.wheel-spin:hover:not(:disabled){background:#b92f28}.wheel-spin:active:not(:disabled){transform:translateY(4px);box-shadow:0 2px 0 #7b211c}.wheel-spin:disabled{opacity:.56;cursor:wait}
+.wheel-reset{border:1px solid #b6a783;color:#435443;background:transparent;padding:10px;border-radius:11px;cursor:pointer;font:700 .86rem inherit}.wheel-reset:hover{background:#f2e9d5}.wheel-note{font-size:.77rem;line-height:1.6;color:#777769;margin:0}
+.wheel-dialog{width:min(92vw,670px);max-height:min(90vh,850px);border:1px solid #d6c28d;border-radius:19px;padding:0;box-shadow:0 25px 80px #131c19a6;color:#253428;background:#fffcf4}
+.wheel-dialog::backdrop{background:#141b18b8;backdrop-filter:blur(3px)}
+.wheel-dialog-inner{padding:clamp(20px,4vw,38px);position:relative}.wheel-dialog-close{position:absolute;right:12px;top:8px;border:none;background:transparent;font-size:2rem;color:#334c37;cursor:pointer}.wheel-question-number{color:#ad7b27;font-weight:800;font-size:.88rem;margin:0 38px 12px 0;text-transform:uppercase}.wheel-dialog h2{font-family:inherit;font-size:clamp(1.1rem,2.4vw,1.5rem);font-weight:800;line-height:1.55;margin:0 0 20px;color:#233b2b}
+.wheel-choices{display:grid;gap:10px}.wheel-choice{display:flex;align-items:center;text-align:left;gap:10px;padding:13px;border:1px solid #dcd6c8;border-radius:11px;background:#fff;color:#253428;font-family:inherit;font-size:.96rem;font-weight:500;line-height:1.5;cursor:pointer}.wheel-choice:hover:not(:disabled){background:#faf2df;border-color:#bb9b4b}.wheel-choice:disabled{cursor:default}.wheel-choice .wheel-letter{display:inline-grid;place-items:center;width:32px;min-width:32px;height:32px;border-radius:50%;background:#ecede7;font-weight:800}.wheel-choice.is-right{background:#e5f5e8;border-color:#448658;color:#15492b}.wheel-choice.is-wrong{background:#fce9e8;border-color:#c96a65;color:#802e25}.wheel-feedback{padding:14px 17px;border-radius:11px;line-height:1.5;background:#f1eadb;color:#293529;margin:17px 0}.wheel-feedback.is-right{background:#e1f2e6;color:#1b5735}.wheel-feedback.is-wrong{background:#fff0e9;color:#893b28}.wheel-dialog-done{display:block;width:100%;border:0;border-radius:11px;padding:13px 20px;background:#284937;color:#fff;font-family:inherit;font-size:.96rem;font-weight:700;cursor:pointer;margin-top:14px}
+@media(max-width:820px){.wheel-layout{grid-template-columns:1fr}.wheel-stage{width:min(100%,490px)}.wheel-sidebar{max-width:620px;width:100%;margin:auto}}
+@media(prefers-reduced-motion:reduce){.wheel-disc{transition-duration:.4s!important}}
+
+/* Thêm: lời giải chi tiết tách riêng khỏi thông báo đúng/sai */
+.wheel-explanation[hidden]{display:none!important}
+.wheel-explanation{margin-top:14px;border-radius:14px;border:1px solid #c9d8bc;background:#f2f8ef;padding:clamp(16px,3vw,22px);color:#253b29;box-shadow:0 3px 12px rgba(35,70,33,.05)}
+.wheel-explanation h3{font-family:inherit;font-weight:800;font-size:.86rem;line-height:1.45;color:#225e39;letter-spacing:.035em;margin:0 0 10px}
+.wheel-explanation-text{line-height:1.7;margin:0 0 12px;text-align:left;font-size:.96rem}
+.wheel-explanation-source{border-top:1px solid #d5e3cf;padding-top:10px;margin:0;font-size:.78rem;line-height:1.6;color:#5c705e}
+.wheel-feedback{font-weight:700}
+.wheel-dialog-inner{max-height:90vh;overflow-y:auto;overscroll-behavior:contain}
+.wheel-dialog-done{margin-bottom:4px}
