@@ -71,3 +71,53 @@
 .tt-card-cover.has-image .tt-cover-placeholder {visibility:hidden;}
 .tt-card-cover.is-empty .tt-cover-placeholder {visibility:visible;}
 .tt-card-cover .tt-card-number {z-index:3;}
+
+
+/* BẢN VÁ 19-11-2026: sửa chồng chữ dưới ảnh chi tiết Truyền thống.
+   - Chú thích ảnh đứng dưới ảnh, không trôi cùng cuộn trang.
+   - Ẩn hướng dẫn kỹ thuật dành cho người quản trị khỏi trang công khai.
+   - Không ảnh hưởng ảnh bìa hoặc ảnh từng trang trong dữ liệu. */
+.tt-detail .tt-illustration {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0;
+  min-width: 0;
+}
+.tt-detail .tt-illustration figure {
+  position: static !important;
+  inset: auto;
+  top: auto;
+  width: 100%;
+  margin: 0;
+  display: block;
+  min-width: 0;
+}
+.tt-detail .tt-illustration figure img {
+  position: static;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.tt-detail .tt-illustration figcaption {
+  display: block;
+  position: static;
+  width: 100%;
+  max-width: 100%;
+  margin: 12px 0 0;
+  padding: 0 6px 4px;
+  font-family: inherit;
+  font-size: 0.77rem;
+  font-weight: 500;
+  line-height: 1.65;
+  text-align: center;
+  color: #63553f;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+.tt-detail .tt-illustration .tt-img-guide {
+  display: none !important;
+}
