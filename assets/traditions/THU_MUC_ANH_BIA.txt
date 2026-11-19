@@ -1,0 +1,17 @@
+﻿Đây là thư mục để đặt ảnh bìa của 9 truyền thống.
+
+Chưa có ảnh bìa nào được đóng gói trong bản vá.
+
+Ví dụ, bạn chép ảnh "trung-thanh.jpg" vào thư mục này rồi mở
+  data/traditions-covers.js
+và sửa dòng số 1 thành:
+  1: "assets/traditions/trung-thanh.jpg",
+
+Đối với ảnh trong các trang nội dung, sửa "detailImages" của truyền thống
+trong file data/traditions.js, ví dụ:
+  "detailImages": [
+    "assets/traditions/anh-trang-1.jpg",
+    "assets/traditions/anh-trang-2.jpg"
+  ]
+
+Vui lòng chú ý chính xác tên file, phần mở rộng, chữ hoa/chữ thường.
