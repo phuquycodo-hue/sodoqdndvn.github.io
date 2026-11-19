@@ -377,3 +377,56 @@ apply();document.querySelectorAll('[data-nav]').forEach(a=>{if(location.pathname
   `;
   document.head.appendChild(style);
 })();
+
+/* BỔ SUNG MỤC "TRUYỀN THỐNG" VÀO NAV: không can thiệp tính năng cũ. */
+(()=>{
+ const nav=document.querySelector('.topbar .navlinks');
+ if(!nav)return;
+ let link=nav.querySelector('[data-nav="truyen-thong.html"]');
+ if(!link){
+   link=document.createElement('a');
+   link.dataset.nav='truyen-thong.html';link.href='truyen-thong.html';
+   const symbol=document.createElement('i');symbol.textContent='✦';
+   link.appendChild(symbol);link.appendChild(document.createTextNode('Truyền thống'));
+   const videoLink=nav.querySelector('[data-nav="videos.html"]');
+   if(videoLink)nav.insertBefore(link,videoLink);else nav.appendChild(link);
+ }
+ const url=location.pathname;
+ if(url.endsWith('/truyen-thong.html')||url.endsWith('/truyen-thong-chi-tiet.html'))link.classList.add('active');
+ if(!document.getElementById('vpa-nav-six-items-style')){
+ const style=document.createElement('style');style.id='vpa-nav-six-items-style';
+ style.textContent=`@media(min-width:1121px) {.topbar .navlinks a{padding:11px 10px;font-size:.82rem}}\n
+ @media (min-width:851px) and (max-width:1120px){
+ .topbar .navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:var(--green,#263523);padding:12px 22px 20px;flex-direction:column;align-items:stretch;box-shadow:0 15px 24px #1116;z-index:35}
+ .topbar .navlinks.open{display:flex}
+ .topbar .menu-toggle{display:block}}
+ `;
+ document.head.appendChild(style);
+ }
+})();
+
+
+/* NỀN TRỐNG ĐỒNG MỚI NHẤT — CHỈ TRANG TIMELINE. */
+(()=>{
+  if(!document.getElementById('timeline') || document.getElementById('vpa-timeline-trong-dong-20261119')) return;
+  document.body.classList.add('vpa-timeline-trong-dong');
+  const style=document.createElement('style');style.id='vpa-timeline-trong-dong-20261119';
+  style.textContent=`
+    body.vpa-timeline-trong-dong {
+      background-color:#e9d79b !important;
+      background-image:linear-gradient(180deg,rgba(249,247,235,.76),rgba(249,246,230,.87)),url('assets/backgrounds/timeline-qdndvn.png') !important;
+      background-position:center,center !important;
+      background-size:cover,cover !important;
+      background-repeat:no-repeat,no-repeat !important;
+      background-attachment:fixed,fixed !important;
+    }
+    body.vpa-timeline-trong-dong::before,body.vpa-timeline-trong-dong::after{content:none !important}
+    body.vpa-timeline-trong-dong .masthead {
+      background-image:linear-gradient(108deg,rgba(29,63,34,.78),rgba(90,66,16,.38)),url('assets/backgrounds/timeline-qdndvn.png') !important;
+      background-position:center,center 32% !important;
+      background-size:cover,cover !important;
+      background-repeat:no-repeat,no-repeat !important;
+    }
+    @media(max-width:760px) { body.vpa-timeline-trong-dong {background-attachment:scroll,scroll !important} }
+  `;document.head.appendChild(style);
+})();
