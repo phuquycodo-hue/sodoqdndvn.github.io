@@ -297,7 +297,6 @@ window.HEROES = [
       "Chiến công tiêu biểu:",
       "Là nhà tình báo hoạt động đơn tuyến độc lập vô cùng mưu trí, thâm nhập vào hàng ngũ sĩ quan cao cấp của Quân lực Việt Nam Cộng hòa (lên tới chức Đại tá, Tỉnh trưởng Kiến Hòa/Bến Tre, Tham vụ báo chí tại Đại sứ quán Việt Nam Cộng hòa ở Mỹ). Ông đã trực tiếp phá vỡ nhiều cuộc hành quân càn quét lớn của địch, giải thoát hàng nghìn tù chính trị, cung cấp nhiều tin tức chiến lược quan trọng và tham gia dàn xếp các cuộc đảo chính làm rung chuyển nội bộ chính quyền Sài Gòn giai đoạn 1963–1965. Ông bị địch sát hại dã man tháng 7/1965 sau khi bị lộ.",
       "Danh hiệu: Truy tặng danh hiệu Anh hùng Lực lượng vũ trang nhân dân ngày 30/8/1995.",
-      "II. Các Anh hùng gắn liền với những chiến công biểu tượng trên đại chúng"
     ],
     "image": "",
     "portrait": "assets/heroes/pham ngoc thao.jpg",
