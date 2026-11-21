@@ -1,0 +1,20 @@
+BẢN VÁ THAY TÀI LIỆU THAM KHẢO CHÍNH THỐNG CHO VÒNG QUAY 50 CÂU
+
+Các thay đổi:
+1. Bỏ toàn bộ tên ba file Word (.docx) khỏi mục Tài liệu tham khảo trên website.
+2. Mỗi câu có liên kết đọc thêm sách thực có tại NXB Quân đội nhân dân hoặc NXB Chính trị quốc gia Sự thật và một liên kết đối chiếu trực tuyến ở Báo Quân đội nhân dân/cơ quan quân sự.
+3. Chỉnh diễn đạt các lời giải không còn ghi “theo tài liệu Word”.
+4. Giữ nguyên 50 câu, 4 đáp án và quy tắc vòng quay; giữ nút tải phần mềm .exe.
+5. Sửa cách hỏi các câu 23-24 để không phụ thuộc cụm “theo tài liệu”.
+
+CÀI ĐẶT:
+- Sao lưu các file cũ.
+- Giải nén ZIP, chép đè: exam.html, data/wheel-questions.js, js/wheel.js, css/wheel.css vào thư mục tương ứng.
+- Cập nhật 4 file trên GitHub, Commit changes, Ctrl+F5.
+- KHÔNG cần chép lại thư mục downloads; phần mềm .exe giữ nguyên.
+
+QUAN TRỌNG VỀ NGUỒN:
+- Trang giới thiệu sách NXB xác nhận sách và chủ đề, KHÔNG cung cấp toàn bộ nội dung/số trang của bản in.
+- Các liên kết Báo QĐND và cơ quan quân sự dùng để đối chiếu sự kiện cụ thể.
+- Không có số trang trong bản vá do chưa đối chiếu trực tiếp từng bản in. Các liên kết này không phải chứng nhận rằng mỗi chi tiết đã được kiểm tra ngay trong sách.
+- THU_MUC_TAI_LIEU.md: có danh sách đủ 50 câu kèm sách và đường dẫn đối chiếu.

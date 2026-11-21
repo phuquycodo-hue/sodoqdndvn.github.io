@@ -28,7 +28,7 @@ function sector(i){const center=(-90+i*step)*Math.PI/180,half=step*Math.PI/360,r
  return `<path d="M320 320 L${x1.toFixed(2)} ${y1.toFixed(2)} A299 299 0 0 1 ${x2.toFixed(2)} ${y2.toFixed(2)} Z" fill="${color}" stroke="#f0dfac" stroke-width=".95"/><text x="${x.toFixed(2)}" y="${y.toFixed(2)}" text-anchor="middle" dominant-baseline="central" fill="#fff" font-size="15" font-weight="800" font-family="Arial,sans-serif">${String(i+1).padStart(2,'0')}</text>`;}
 function drawWheel(){svg.innerHTML=`<circle cx="320" cy="320" r="315" fill="#b99146" stroke="#765322" stroke-width="7"/>`+Array.from({length:N},(_,i)=>sector(i)).join('')+`<circle cx="320" cy="320" r="74" fill="#f6e0a1" stroke="#704a1c" stroke-width="5"/><circle cx="320" cy="320" r="65" fill="#9c2527" stroke="#f8dfa3" stroke-width="4"/><text x="320" y="318" font-size="19" text-anchor="middle" fill="#fff2c4" font-family="Arial,sans-serif" font-weight="bold">50 CÂU</text><text x="320" y="348" font-size="30" text-anchor="middle" fill="#fbe7a8" font-family="Arial,sans-serif">★</text>`;}
 function showQuestion(i){const q=list[i];pending=i;questionNo.textContent=`MŨI TÊN TRÚNG CÂU SỐ ${String(i+1).padStart(2,'0')}`;questionText.textContent=q.question;feedback.hidden=true;feedback.textContent='';feedback.className='wheel-feedback';doneBtn.hidden=true;
- if(explanationBox){explanationBox.hidden=true;explanationText.textContent='';explanationSource.textContent='';}
+ if(explanationBox){explanationBox.hidden=true;explanationText.textContent='';explanationSource.replaceChildren();}
  choices.innerHTML=q.choices.map((c,j)=>`<button type="button" class="wheel-choice" data-value="${j}"><span class="wheel-letter">${'ABCD'[j]}</span><span>${esc(c)}</span></button>`).join('');
  if(typeof modal.showModal==='function'){modal.showModal();}else{modal.setAttribute('open','');}
 }
@@ -48,7 +48,20 @@ choices.addEventListener('click',e=>{const b=e.target.closest('button[data-value
  answered[i]=answer;save();
  for(const item of choices.querySelectorAll('button')){item.disabled=true;const selected=Number(item.dataset.value);item.classList.toggle('is-right',selected===q.answer);item.classList.toggle('is-wrong',selected===answer&&!ok);}
  feedback.hidden=false;feedback.className='wheel-feedback '+(ok?'is-right':'is-wrong');feedback.textContent=`${ok?'✓ Chính xác!':'✗ Chưa chính xác.'} Đáp án đúng: ${'ABCD'[q.answer]}. ${q.choices[q.answer]}.`;
- if(explanationBox){explanationText.textContent=q.explanation||'Vui lòng đối chiếu tài liệu Word để xem thêm bối cảnh của đáp án.';explanationSource.textContent=q.source||'Tài liệu lịch sử QĐND Việt Nam';explanationBox.hidden=false;}
+ if(explanationBox){explanationText.textContent=q.explanation||'Vui lòng tham khảo các tài liệu chính thống ở dưới.';const refs=Array.isArray(q.references)?q.references:[];
+  explanationSource.replaceChildren();
+  if(refs.length){
+    const ul=document.createElement('ul');ul.className='wheel-ref-list';
+    for(const ref of refs){
+      const li=document.createElement('li'),kind=document.createElement('span');kind.className='wheel-ref-kind';kind.textContent=ref.kind+': ';
+      const a=document.createElement('a');a.href=ref.url;a.textContent=ref.title;a.target='_blank';a.rel='noopener noreferrer';
+      li.append(kind,a);
+      if(ref.detail){const meta=document.createElement('small');meta.className='wheel-ref-detail';meta.textContent=ref.detail;li.append(meta);}
+      ul.append(li);
+    }
+    explanationSource.append(ul);
+  } else {explanationSource.textContent='Chưa có thông tin nguồn xuất bản.';}
+  explanationBox.hidden=false;}
  doneBtn.hidden=false;drawWheel();counts();
 });
 const closeDialog=()=>{if(typeof modal.close==='function')modal.close();else modal.removeAttribute('open');pending=-1;};

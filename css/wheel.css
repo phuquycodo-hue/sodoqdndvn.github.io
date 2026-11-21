@@ -26,3 +26,11 @@
 .wheel-feedback{font-weight:700}
 .wheel-dialog-inner{max-height:90vh;overflow-y:auto;overscroll-behavior:contain}
 .wheel-dialog-done{margin-bottom:4px}
+
+/* Bổ sung liên kết tài liệu xuất bản, không thay đổi phần vòng quay */
+.wheel-ref-list{list-style:none;margin:.5rem 0 0;padding:0;display:grid;gap:.58rem}
+.wheel-ref-list li{padding:.65rem .8rem;background:rgba(255,255,255,.72);border:1px solid rgba(130,106,55,.2);border-radius:10px;line-height:1.5}
+.wheel-ref-kind{font-weight:750;color:#314b36}
+.wheel-ref-list a{color:#124b80;font-weight:650;text-decoration:underline;overflow-wrap:anywhere}
+.wheel-ref-list a:focus-visible{outline:3px solid #2c744a;outline-offset:3px}
+.wheel-ref-detail{display:block;margin-top:.22rem;color:#575d56;font-size:.83rem}
